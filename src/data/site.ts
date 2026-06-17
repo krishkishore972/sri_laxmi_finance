@@ -5,7 +5,7 @@ export const site = {
     "Srilaxmi Finance Consultancy helps individuals, professionals, and businesses with loans, tax filing, financial planning, company registration, and compliance services.",
   url: "https://srilaxmifinance.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917013114599",
-  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "+91XXXXXXXXXX",
+  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "+917013114599",
   email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "contact@srilaxmifinance.com",
   address: "123, Business Hub, Main Road, City - 000001",
   workingHours: "Mon–Sat: 9:30 AM – 7:00 PM",
