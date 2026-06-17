@@ -62,7 +62,7 @@ export default function ContactSection() {
                 icon: MapPin,
                 label: "Office Address",
                 value: contactInfo.address,
-                href: `https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`,
+                href: `https://maps.google.com/?q=${encodeURIComponent(contactInfo.mapLocation)}`,
                 action: "Get Directions",
               },
               {
@@ -126,7 +126,7 @@ export default function ContactSection() {
           >
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm h-[400px]">
               <iframe
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.mapLocation)}&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

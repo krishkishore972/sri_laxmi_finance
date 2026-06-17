@@ -6,8 +6,9 @@ export const site = {
   url: "https://srilaxmifinance.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917013114599",
   phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "+917013114599",
-  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "contact@srilaxmifinance.com",
-  address: "123, Business Hub, Main Road, City - 000001",
+  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "rajashekar0074q@gmail.com",
+  address: "plot no-4, laxmi nagar badangpet, opposite to aditi restuarant near  MVSR college, Hyderabad, Telangana 501510",
+  mapLocation: "17.284833,78.537889",
   workingHours: "Mon–Sat: 9:30 AM – 7:00 PM",
   social: {
     facebook: "https://facebook.com/srilaxmifinance",
@@ -139,5 +140,6 @@ export const contactInfo = {
   whatsapp: site.whatsapp,
   email: site.email,
   address: site.address,
+  mapLocation: site.mapLocation,
   workingHours: site.workingHours,
 };
