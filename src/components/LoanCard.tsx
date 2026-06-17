@@ -46,7 +46,7 @@ export default function LoanCard({ loan, index }: Props) {
       </div>
 
       <a
-        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "91XXXXXXXXXX"}?text=${encodeURIComponent(`Hello Srilaxmi Finance Consultancy, I would like to check my eligibility for ${loan.name}.`)}`}
+        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917013114599"}?text=${encodeURIComponent(`Hello Srilaxmi Finance Consultancy, I would like to check my eligibility for ${loan.name}.`)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-medium px-5 py-2.5 rounded-xl transition-all duration-200 text-sm"
