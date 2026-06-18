@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { site, navLinks } from "@/data/site";
 import { serviceCategories } from "@/data/services";
+import logoIcon from "@/app/public/icons/icon.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +48,7 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleServiceClick = (categoryId: string) => {
+  const handleServiceClick = () => {
     setMobileOpen(false);
     setDropdownOpen(false);
     setMobileDropdownOpen(false);
@@ -65,8 +67,14 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#home" className="flex items-center gap-2.5 shrink-0">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-primary font-bold text-sm">
-              S
+            <div className="relative w-9 h-9 rounded-lg overflow-hidden bg-accent/20">
+              <Image
+                src={logoIcon}
+                alt=""
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
             </div>
             <span className="font-semibold text-lg tracking-tight text-white">
               {site.name}
@@ -119,7 +127,7 @@ export default function Navbar() {
                       {serviceCategories.map((cat) => (
                         <div key={cat.id}>
                           <button
-                            onClick={() => handleServiceClick(cat.id)}
+                            onClick={handleServiceClick}
                             className="text-left text-xs font-semibold text-accent-light uppercase tracking-wider hover:text-white transition-colors mb-2 block"
                           >
                             {cat.title}
@@ -128,7 +136,7 @@ export default function Navbar() {
                             {cat.services.map((s) => (
                               <button
                                 key={s.id}
-                                onClick={() => handleServiceClick(cat.id)}
+                                onClick={handleServiceClick}
                                 className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-white/5 px-2 py-1.5 rounded-lg transition-colors"
                               >
                                 {s.name}
@@ -225,7 +233,7 @@ export default function Navbar() {
                           {cat.services.map((s) => (
                             <button
                               key={s.id}
-                              onClick={() => handleServiceClick(cat.id)}
+                              onClick={handleServiceClick}
                               className="block w-full text-left px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-colors"
                             >
                               {s.name}
