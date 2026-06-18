@@ -67,13 +67,13 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#home" className="flex items-center gap-2.5 shrink-0">
-            <div className="relative w-9 h-9 rounded-lg overflow-hidden bg-accent/20">
+            <div className="relative w-11 h-11 rounded-lg overflow-hidden bg-accent/20">
               <Image
                 src={logoIcon}
                 alt=""
                 fill
-                sizes="36px"
-                className="object-cover"
+                sizes="44px"
+                className="scale-[1.35] object-cover"
               />
             </div>
             <span className="font-semibold text-lg tracking-tight text-white">
